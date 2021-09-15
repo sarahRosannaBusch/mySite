@@ -10,35 +10,67 @@
     <link rel='icon shortcut' href='img/icon.png' />
     <link rel='stylesheet' href='styles.css' />
 </head>
-<body onload='main.init()'>
-<div class='mainContainer'>
-    <header>
+<body id='mainBody' onload='main.init()'>
+<div id='menu'>
+    <header class='avatar'>
         <img src='img/annarose.svg' />
     </header>
     <main>
         <section>
-            <h2>Stuff I'm Making</h2>
+            <h2> Welcome to my site!</h2>
             <p>
-                Mostly I make software and vector graphics. The links here will lead you to some of my hobby projects and things I made for school, to give you an idea of what I do.
+                I'm a freelance software developer who specializes in web-based
+                user interfaces. I also like to write, draw, and build robots. 
+                I'm currently working on some fun stuff to level up my skillset
+                and will be showcasing it here as I go. So check back often. 
             </p>
-            <button onclick='main.nav("./swPortfolio/index.html")'>
-                Software Portfolio
+        </section>
+        <section>
+            <h2>Fun Stuff</h2>
+            <button onclick='main.nav("./pages/book/index.html")'>
+                Memoir
             </button>
-            <button onclick='main.nav("./illustrations/illustrations.html")'>
+            <button onclick='main.nav("./pages/myChess/index.html")'>
+                Play Chess
+            </button>
+            <button style='display:none'>
+                D&D Text Adventure
+            </button>
+            <button onclick='main.nav("./pages/illustrations/illustrations.html")'>
                 Illustrations
             </button>
         </section>
+        <section style='display:none'>
+            <h2>Notes</h2>
+            <button>
+                HTML
+            </button>
+            <button>
+                CSS
+            </button>
+            <button>
+                Javascript
+            </button>
+            <button>
+                nodeJS
+            </button>
+        </section>
         <section>
-            <h2>About Me</h2>
-            <p>
-                I'm a software developer with a background in electronics engineering and chemistry. I have a passion for creating things that both look great and work well. Since childhood I have loved to write, draw, and solve logic puzzles, which is why I love user interface development. It scratches the itch for all three.
-            </p>
-            <button onclick='main.nav("./resume/index.html")'>
-                Resume
+            <h2>Portfolio and Resume</h2>
+            <button onclick='main.nav("./pages/swPortfolio/index.html")'>
+                Software Portfolio
+            </button>
+            <button onclick='main.nav("./pages/resume/index.html")'>
+                Resume 
             </button>
         </section>
     </main>
     <footer>
+        <div id='patrons'>
+            <a href='https://www.patreon.com/sarahrosannabusch' target='_blank'>
+                Become a patron
+            </a>
+        </div>
         <div id='signature'></div>
         <div id='links'>
             <a href='https://www.instagram.com/annarose0113/' target='_blank'>
