@@ -173,12 +173,21 @@ h2 {
   color: blueviolet;
 }
 
+h3 {
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-family: cursive;
+  color: blueviolet;
+}
+
 .frame {
   margin: 1em;
-  background: #232323;
+  background: #323232;
   border: 5px inset silver;
   box-shadow: 2px 5px 20px 5px black;
   padding: 2px;
+  text-align: center;
 }
 .frame img {
   max-width: 100%;
@@ -191,6 +200,7 @@ section {
   padding-top: 5px;
   background-image: linear-gradient(#121212, #454545);
   margin-bottom: 5px;
+  text-align: center;
 }
 
 p {
@@ -234,6 +244,16 @@ button {
 
 button:hover {
   background: blueviolet;
+}
+
+button.tab {
+  border-bottom: 1px;
+  border-radius: 5px 5px 0 0;
+}
+
+button.active {
+  background: #212121;
+  color: yellow;
 }
 
 /******************************** footer *********************************/
@@ -314,7 +334,7 @@ footer a:link {
 
   .frame {
     display: inline-block;
-    max-width: 750px;
+    max-width: 650px;
     margin-left: 2em;
   }
 }

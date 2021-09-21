@@ -5,12 +5,12 @@
     <title> Sarah Rosanna Busch </title>
     <meta name='author' content='Sarah Rosanna Busch' />
     <meta name='description' content='illustrations portfolio' />
-    <meta name='date' content='21 April 2020' />
+    <meta name='date' content='17 Sept 2021' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon shortcut' href='../../img/icon.png' />
     <link rel='stylesheet' href='../../styles.css' />
 </head>
-<body onload='footer.setup()'>
+<body onload='illustrations.load()'>
     <header>
         <a href='http://sarahrosannabusch.ca/' target='_parent'>
             <img class='smAvatar' src='../../img/annarose.svg' />
@@ -18,38 +18,16 @@
         </a>
         <h1>Illustrations</h1>
     </header>
-    <p>I use scalable vector graphics to create some of the more complex visual components of my web applications. These are a few examples of how I use those skills and tools for fun too.</p>
-    <div class='frame'>
-        <img src='img/robot.svg' />
+    <div id='tabs' style='display:flex'>
+        <button class='tab active' style='flex:0.5' onclick='illustrations.show("techDrawings", this)'>
+            Technical Drawings
+        </button>
+        <button class='tab' style='flex:0.5' onclick='illustrations.show("vectorArt", this)'>
+            Vector Art
+        </button>
     </div>
-    <div class='frame' style='display:none'>
-        <img src='img/theevolutionoftelevision.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/seagull.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/bee.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/modernTurtle.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/facialExpressions.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/Thynee.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/wineBottle.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/tree.svg' />
-    </div>
-    <div class='frame'>
-        <img src='img/baldEagle.svg' />
-    </div>
-    
+    <section id='techDrawings'></section> 
+    <section id='vectorArt' style='display:none'></section>   
     <footer class='pageFoot'>
         <div id='patrons'>
             <a href='https://www.patreon.com/sarahrosannabusch' target='_blank'>
@@ -70,6 +48,8 @@
         </div>
     </footer>
 
+    <script src='../../f.js'></script>
     <script src='../../footer.js'></script>
+    <script src='illustrations.js'></script>
 </body>
 </html>

@@ -1,12 +1,12 @@
-Release Date: 15 Sept 2021
-- clean up fs in gitHub
-- add tech drawings to Illustrations page
+TODO:
+- clean up fs in gitHub [complete]
+- add tech drawings to Illustrations page [complete]
 - fix vertical alignment (and update f.)
 - fix layout responsiveness
 - make page refresh work
 
 
-Release Date: 15 July 2021
+Released: 15 July 2021
 
 LAYOUT
 - make layout auto adjust when screen size changes [complete]
