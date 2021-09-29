@@ -14,6 +14,7 @@ var myChess = (function() {
     var $status = $('#status')
     var $pgn = $('#pgn')
     var $fen = $('#fen')
+    var myBoard = f.html.getElem('#myBoard')
     var whiteSquareGrey = '#a9a9a9'
     var blackSquareGrey = '#696969'
 
@@ -26,7 +27,7 @@ var myChess = (function() {
             dropOffBoard: 'trash',
             sparePieces: false,
             orientation: 'white',
-            pieceTheme: 'img/chesspieces/myPieces/{piece}.png',
+            pieceTheme: 'img/chesspieces/myPieces/{piece}.svg',
             onDragStart: onDragStart,
             onDrop: onDrop,
             onSnapEnd: onSnapEnd,
@@ -109,7 +110,21 @@ var myChess = (function() {
         // illegal move
         if (move === null) return 'snapback'
 
+        flipBoard()
         updateStatus()
+    }
+
+    function flipBoard() {
+        var deg = -90; //neg to give a bit of a delay
+        var timer = setInterval(function() {
+            deg++;
+            if(deg > 0) myBoard.style.transform = "rotate(" + deg + "deg)"
+            if(deg >= 180) {
+                clearInterval(timer)
+                myBoard.style.transform = "rotate(0deg)"
+                board.flip()
+            }
+        }, 1)
     }
 
     function onMouseoverSquare (square, piece) {
