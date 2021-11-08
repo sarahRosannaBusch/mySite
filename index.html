@@ -10,58 +10,50 @@
     <link rel='icon shortcut' href='img/icon.png' />
     <link rel='stylesheet' href='styles.css' />
 </head>
-<body id='mainBody' onload='main.init()'>
+<body id='mainBody' onload='main.init()' onresize='main.nav()'>
 <div id='menu'>
     <header class='avatar'>
         <img src='img/annarose.svg' />
     </header>
     <main>
         <section>
-            <h2> Welcome to my site!</h2>
+            <h2> Welcome to my studio!</h2>
             <p>
-                I'm a freelance software developer who specializes in web-based
-                user interfaces. I also like to write, draw, and build robots. 
-                I'm currently working on some fun stuff to level up my skillset
-                and will be showcasing it here as I go. So check back often. 
+                I'm a Full Stack Web Developer who specializes in clean, clear, and quick
+                user interfaces. I also like to write, draw, and play games. 
             </p>
         </section>
         <section>
-            <h2>Fun Stuff</h2>
-            <button onclick='main.nav("./pages/book/index.html")'>
-                Memoir
+            <h2>Scalable Vector Graphics</h2>
+            <button onclick='main.nav("./pages/illustrations/techDrawings.html")'>
+                Technical Drawings
             </button>
+            <button onclick='main.nav("./pages/illustrations/vectorArt.html")'>
+                Vector Art
+            </button>
+        </section>
+        <section>
+            <h2>My Games</h2>
             <button onclick='main.nav("./pages/myChess/index.html")'>
                 Play Chess
             </button>
-            <button style='display:none'>
+            <button onclick='main.nav("http://172.218.134.103:8080/")'> <!-- public IP: 172.218.134.103 -->
                 D&D Text Adventure
             </button>
-            <button onclick='main.nav("./pages/illustrations/illustrations.html")'>
-                Illustrations
-            </button>
         </section>
-        <section style='display:none'>
-            <h2>Notes</h2>
-            <button>
-                HTML
+        <section>
+            <h2>Creative Writing</h2>
+            <button onclick='main.nav("./pages/book/index.html")'>
+                Memoir
             </button>
-            <button>
-                CSS
-            </button>
-            <button>
-                SVG
-            </button>
-            <button>
-                Javascript
-            </button>
-            <button>
-                nodeJS
+            <button onclick='main.nav("https://vocal.media/journal/the-wrong-foot")'>
+                The Wrong Foot
             </button>
         </section>
         <section>
             <h2>Portfolio and Resume</h2>
             <button onclick='main.nav("./pages/swPortfolio/index.html")'>
-                Software Portfolio
+                Past Projects
             </button>
             <button onclick='main.nav("./pages/resume/index.html")'>
                 Resume 

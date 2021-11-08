@@ -19,21 +19,17 @@ var main = (function() {
         elem.sidePanel = f.html.getElem('#sidePanel');
         elem.sideView = f.html.getElem('#sideView');
         footer.setup();
-        if(document.documentElement.clientWidth >= 700) {
-            main.nav("./pages/book/index.html");
+        if(document.documentElement.clientWidth >= 800) {
+            main.nav("./pages/illustrations/techDrawings.html");
         }
     }
 
     that.nav = function(url) {
-        if(document.documentElement.clientWidth < 700) {
+        url = !url ? openPage : url;
+        if(document.documentElement.clientWidth < 800) {
             location.assign(url);
         } else {
-            if(url === openPage) {
-                elem.sidePanel.style.display = 'none';
-                openPage = '';
-            } else {
-                main.embedPage(url);
-            }
+            main.embedPage(url);
         }
     }
 

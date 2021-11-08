@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
     #mainBody {
         display: flex;
         height: 100vh;
@@ -7,7 +7,6 @@
 
     #menu { 
         position: relative;
-        display: inline-block;
         width: 350px;
         overflow-y: auto;
     }

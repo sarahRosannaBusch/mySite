@@ -19,8 +19,6 @@ var myChess = (function() {
     var blackSquareGrey = '#696969'
 
     that.init = function() {
-        footer.setup();
-
         board = Chessboard('myBoard', {
             draggable: true,
             position: 'start',
