@@ -48,7 +48,7 @@ var illustrations = (function(){
                 h3.innerText = heading;
             }
             let imgElem = f.html.spawn(frame, 'img');
-            imgElem.src = imgElem.alt = pageName + '/' + drawings[i][urlIdx];
+            imgElem.src = imgElem.alt = 'pages/illustrations/' + pageName + '/' + drawings[i][urlIdx];
         }
     }
     

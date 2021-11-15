@@ -1,9 +1,29 @@
 TODO:
+- fix vertical alignment (and update f.) [complete]
+- refactor to reduce iframes
+- add browser nav functionality
+- make hide/show feature for menu
+- create store page
+
+PAGE: PLAY CHESS
+- move chess app to it's own repo and host it here in an iframe
+
+PAGE: D&D T.A.
+- add header and footer, host app in an iframe
+
+ILLUSTRATIONS
+- refactor to eliminate iframes
+
+MEMOIR
+- move shopify stuff to store page and direct viewers to it, or amazon
+
+THE WRONG FOOT
+- add header and link to open in it's own tab
+
+
+Released: 21 Sept 2021
 - clean up fs in gitHub [complete]
 - add tech drawings to Illustrations page [complete]
-- fix vertical alignment (and update f.)
-- fix layout responsiveness
-- make page refresh work
 
 
 Released: 15 July 2021
@@ -16,3 +36,36 @@ PAGES
 - swPortfolio: rearrange order [complete]
 - resume: edit text based on Mom's suggestion [complete]
 - memoir: edit text and add Shopify button [complete]
+
+
+Released: 21 June 2021
+
+MAIN MENU
+- update text and buttons [complete]
+
+PAGE HEADERS/FOOTER [1hr]
+- add Patreon link [complete]
+
+PAGE: PLAY CHESS [1hr + stretch]
+- edit text [complete]
+- display pgn [complete]
+- fix graphics (stretch goal) [complete]
+
+PAGE: MEMOIR [1hr]
+- change header to say "Memoir" [complete]
+- fix image width bug [complete]
+
+PAGE: SOFTWARE PORTFOLIO [1hr]
+- remove inset paragraph border [complete]
+- add lanelight and QT links, and switch to cp [complete]
+- move photo site demo out of repo [complete]
+
+PAGE: ILLUSTRATIONS
+- update text and add some more pieces [complete]
+
+VERTICAL LAYOUT [1hr]
+- fix horizontal scrollbar bug [complete]
+
+HORIZONTAL LAYOUT [2hr]
+- hide avatar and footer on pages [complete]
+- keep menu on left, display page on right [complete]
