@@ -12,13 +12,13 @@ PAGE: D&D T.A.
 - add header and footer, host app in an iframe
 
 ILLUSTRATIONS
-- refactor to eliminate iframes
+- refactor to eliminate iframes [complete]
 
 MEMOIR
 - move shopify stuff to store page and direct viewers to it, or amazon
 
 THE WRONG FOOT
-- add header and link to open in it's own tab
+- add header and link to open in it's own tab [complete]
 
 
 Released: 21 Sept 2021

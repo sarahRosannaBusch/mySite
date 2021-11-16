@@ -124,8 +124,13 @@ body {
 
 /* ***************************** Pages ****************************** */
 
-header { //page headers 
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+header { 
     display: block;
     width: 100%;
     padding-top: 0.2em;
@@ -153,6 +158,11 @@ header { //page headers
         width: 30px;
         vertical-align: bottom;
     }
+}
+
+.page main {
+    flex: 1;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -260,6 +270,16 @@ button.active {
     color: yellow;
 }
 
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.scrollContainer {  
+    height: 100%;
+    overflow-y: auto;
+}
 
 /******************************** footer *********************************/
 

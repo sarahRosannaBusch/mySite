@@ -22,6 +22,7 @@
                 I'm a Full Stack Web Developer who specializes in clean, clear, and quick
                 user interfaces. I also like to write, draw, and play games. 
             </p>
+            <button onclick='main.nav("shop")'>Shop</button>
         </section>
         <section>
             <h2>My Apps & Games</h2>
@@ -53,7 +54,7 @@
         <section>
             <h2>Portfolio and Resume</h2>
             <button onclick='main.nav("./pages/swPortfolio/index.html")'>
-                Past Projects
+                Software Portfolio
             </button>
             <button onclick='main.nav("./pages/resume/index.html")'>
                 Resume 
@@ -80,9 +81,232 @@
         </div>
     </footer>
 </div>
+
 <div id='sidePanel'>
-        <!-- page loads here -->
+    <!-- page loads here -->    
 </div>
+
+<!-- store is here at top level so checkout tab shows on all pages -->  
+<div id='shop'>
+    <header>
+        <a href='http://sarahrosannabusch.ca/' target='_parent'>
+            Sarah Rosanna Busch's
+        </a>
+        <div class='bottomGradient'>
+            <h1>Shop</h1>
+        </div>
+    </header>      
+    <section>
+        <h2>Order Signed Print</h2>
+        <p>The first run of signed paperbacks has been sent out! The next round will ship towards the end of August.
+        </p>
+        <div id='product-component-1626315069099' style='margin:auto; min-height:62px'></div>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+        (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+            } else {
+            loadScript();
+            }
+        } else {
+            loadScript();
+        }
+        function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+            domain: 'sarahrosannabusch-ca.myshopify.com',
+            storefrontAccessToken: 'c9e2da8e87cacf5dda11df4d1288d4ff',
+            });
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+                id: '6893485686952',
+                node: document.getElementById('product-component-1626315069099'),
+                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                options: {
+        "product": {
+            "styles": {
+            "product": {
+                "@media (min-width: 601px)": {
+                "max-width": "calc(25% - 20px)",
+                "margin-left": "20px",
+                "margin-bottom": "50px"
+                }
+            }
+            },
+            "buttonDestination": "modal",
+            "contents": {
+            "img": false,
+            "title": false,
+            "price": false,
+            "options": false
+            },
+            "text": {
+            "button": "Add to Cart"
+            }
+        },
+        "productSet": {
+            "styles": {
+            "products": {
+                "@media (min-width: 601px)": {
+                "margin-left": "-20px"
+                }
+            }
+            }
+        },
+        "modalProduct": {
+            "contents": {
+            "img": false,
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
+            },
+            "styles": {
+            "product": {
+                "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px"
+                }
+            }
+            },
+            "text": {
+            "button": "Add to cart"
+            }
+        },
+        "option": {},
+        "cart": {
+            "text": {
+            "total": "Subtotal",
+            "button": "Checkout"
+            }
+        },
+        "toggle": {}
+        },
+            });
+            });
+        }
+        })();
+        /*]]>*/
+        </script>
+        <br>
+        <p>                
+            Once you've added to cart, click the "Checkout" button. A secure window, powered by Shopify, will open to take your payment and shipping information.
+        </p>
+    </section>
+    <section>
+        <h2>Buy eBook Download</h2>
+        <p>I've prepared an .epub file that will work with any eReader. It's been tested on Kindle, Kobo, and iBooks but if you have any problems viewing it on your device, please let me know and I'll fix it for you.</p>
+        <div id='product-component-1628374319530' style='margin:auto; min-height:62px'></div>
+        <script type="text/javascript">
+        /*<![CDATA[*/
+        (function () {
+        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+        if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+            ShopifyBuyInit();
+            } else {
+            loadScript();
+            }
+        } else {
+            loadScript();
+        }
+        function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+        }
+        function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+            domain: 'sarahrosannabusch-ca.myshopify.com',
+            storefrontAccessToken: 'c9e2da8e87cacf5dda11df4d1288d4ff',
+            });
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+            ui.createComponent('product', {
+                id: '6869697364136',
+                node: document.getElementById('product-component-1628374319530'),
+                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                options: {
+        "product": {
+            "styles": {
+            "product": {
+                "@media (min-width: 601px)": {
+                "max-width": "calc(25% - 20px)",
+                "margin-left": "20px",
+                "margin-bottom": "50px"
+                }
+            }
+            },
+            "buttonDestination": "modal",
+            "contents": {
+            "img": false,
+            "title": false,
+            "price": false,
+            "options": false
+            },
+            "text": {
+            "button": "Add to Cart"
+            }
+        },
+        "productSet": {
+            "styles": {
+            "products": {
+                "@media (min-width: 601px)": {
+                "margin-left": "-20px"
+                }
+            }
+            }
+        },
+        "modalProduct": {
+            "contents": {
+            "img": false,
+            "imgWithCarousel": true,
+            "button": false,
+            "buttonWithQuantity": true
+            },
+            "styles": {
+            "product": {
+                "@media (min-width: 601px)": {
+                "max-width": "100%",
+                "margin-left": "0px",
+                "margin-bottom": "0px"
+                }
+            }
+            },
+            "text": {
+            "button": "Add to cart"
+            }
+        },
+        "option": {},
+        "cart": {
+            "text": {
+            "total": "Subtotal",
+            "button": "Checkout"
+            }
+        },
+        "toggle": {}
+        },
+            });
+            });
+        }
+        })();
+        /*]]>*/
+        </script>
+        <br>
+        <p>Clicking the "Checkout" button will open a secure window. Once your payment is complete, a download link will be displayed.</p>
+    </section>
+</div>
+
     <script src='f.js'></script>
     <script src='main.js'></script>
     <script src='footer.js'></script>  
