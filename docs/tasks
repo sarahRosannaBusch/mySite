@@ -1,24 +1,32 @@
 TODO:
 - fix vertical alignment (and update f.) [complete]
-- refactor to reduce iframes
-- add browser nav functionality
-- make hide/show feature for menu
-- create store page
+- refactor to reduce iframes (use ajax) [complete]
+- create Store page [wip]
+- create My Services page [wip]
+- clean up/organize css
+
+MAIN MENU
+- make hide/show feature instead of nav in page headers
+- add url fragments on nav for browser history
 
 PAGE: PLAY CHESS
-- move chess app to it's own repo and host it here in an iframe
+- move chess app to it's own repo and host it here [complete]
+- add links to open app in new tab, and to friend me on lichess
 
-PAGE: D&D T.A.
-- add header and footer, host app in an iframe
+PAGE: D&D Backstories
+- add header and footer, host app in an iframe [wip]
 
 ILLUSTRATIONS
 - refactor to eliminate iframes [complete]
 
 MEMOIR
-- move shopify stuff to store page and direct viewers to it, or amazon
+- move shopify stuff to store page and direct viewers to it, or amazon [wip]
 
-THE WRONG FOOT
-- add header and link to open in it's own tab [complete]
+SHORT STORIES
+- add header and link to open in it's own tab [wip]
+
+RESUME
+- fix styles
 
 
 Released: 21 Sept 2021

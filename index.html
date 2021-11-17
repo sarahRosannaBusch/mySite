@@ -10,53 +10,56 @@
     <link rel='icon shortcut' href='img/icon.png' />
     <link rel='stylesheet' href='styles.css' />
 </head>
-<body id='mainBody' onload='main.init()' onresize='main.nav()'>
+<body id='mainBody' onload='main.init()'>
 <div id='menu'>
     <header class='avatar'>
         <img src='img/annarose.svg' />
     </header>
     <main>
         <section>
-            <h2> Welcome to my studio!</h2>
+            <h2> Welcome to my site!</h2>
             <p>
-                I'm a Full Stack Web Developer who specializes in clean, clear, and quick
-                user interfaces. I also like to write, draw, and play games. 
-            </p>
+                I'm a Full Stack Web Developer who specializes in clean, clear, and quick user interfaces. I also like to write, draw, and play games. Take a look around to learn more about me and what I do.
+            </p>   
+        </section>       
+        <section>
+            <h2>Studio</h2>
             <button onclick='main.nav("shop")'>Shop</button>
+            <button onclick='main.nav("services")'>Services</button>
         </section>
         <section>
-            <h2>My Apps & Games</h2>
-            <button onclick='main.nav("./pages/myChess/index.html")'>
-                Play Chess
+            <h2>Apps & Games</h2>
+            <button onclick='main.nav("myChess")'>
+                Chessboard
             </button>
-            <button onclick='main.nav("./pages/dndBackstories/index.html")'>
+            <button onclick='main.nav("dndBackstories")'>
                 D&D Text Adventure
             </button>
         </section>
         <section>
             <h2>Illustrations</h2>
-            <button onclick='main.nav("./pages/illustrations/vectorArt.html")'>
+            <button onclick='main.nav("vectorArt")'>
                 Vector Art
             </button>
-            <button onclick='main.nav("./pages/illustrations/techDrawings.html")'>
+            <button onclick='main.nav("techDrawings")'>
                 Technical Drawings
             </button>
         </section>
         <section>
             <h2>Creative Writing</h2>
-            <button onclick='main.nav("./pages/book/shortStories.html")'>
+            <button onclick='main.nav("shortStories")'>
                 Short Stories
             </button>
-            <button onclick='main.nav("./pages/book/index.html")'>
+            <button onclick='main.nav("book")'>
                 Memoir
             </button>
         </section>
         <section>
             <h2>Portfolio and Resume</h2>
-            <button onclick='main.nav("./pages/swPortfolio/index.html")'>
+            <button onclick='main.nav("swPortfolio")'>
                 Software Portfolio
             </button>
-            <button onclick='main.nav("./pages/resume/index.html")'>
+            <button onclick='main.nav("resume")'>
                 Resume 
             </button>
         </section>
@@ -82,12 +85,12 @@
     </footer>
 </div>
 
-<div id='sidePanel'>
-    <!-- page loads here -->    
+<div id='sidePanel' style='display:none'>
+    <!-- page loads here -->  
 </div>
 
 <!-- store is here at top level so checkout tab shows on all pages -->  
-<div id='shop'>
+<div id='shop' class='page'>
     <header>
         <a href='http://sarahrosannabusch.ca/' target='_parent'>
             Sarah Rosanna Busch's

@@ -281,6 +281,15 @@ iframe {
   overflow-y: auto;
 }
 
+ul {
+  text-align: left;
+  margin: auto;
+}
+ul h3 {
+  text-align: left;
+  color: gold;
+}
+
 /******************************** footer *********************************/
 footer {
   width: 100%;
@@ -335,7 +344,7 @@ footer a:link {
     overflow-y: auto;
   }
 
-  #sidePanel {
+  #sidePanel, #shop {
     display: inline-block;
     flex: 1;
     height: 100vh;
