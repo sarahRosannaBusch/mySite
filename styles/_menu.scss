@@ -1,0 +1,128 @@
+/* ****************************** Menu ***************************** */
+
+#menu {
+    header {    
+        width: 100%;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: monospace;
+        background: $grey2;
+        flex: 0 0 200px;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    main {
+        vertical-align: top;
+        text-align: center;
+        width: 100%;
+        flex: 0.99;
+    }
+
+    h2 {
+        font-size: 16pt;
+        background-image: linear-gradient(to right, blueviolet, lavender);
+        color: black;
+        font-family: monospace;
+        text-align: center;
+        padding: 0.2em;
+    }
+
+    section {
+        background: $grey2;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    p {
+        padding: 0.75em;
+        max-width: 12cm;
+        margin: auto;
+        text-align: left;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        color: $grey13;
+        background-image: linear-gradient($grey4, black);
+        font-weight: bold;
+        margin-top: 5px;
+        width: 100%;
+        padding: 0.5em;
+        outline: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        box-shadow: 2px 1px 4px 2px lavender;
+        color: lavender;
+    }
+
+    button:active {
+        background-image: linear-gradient(black, $grey4);
+    }
+
+    button.selected {
+        background-image: linear-gradient($grey3, $grey1);
+        box-shadow: 2px 1px 2px 2px gold, -2px -1px 1px 1px lavender;
+        color: gold;
+    }
+
+    footer {
+        width: 100%;
+        flex: 0 0 100px;
+        position: relative;
+        bottom: 0;
+        user-select: none;
+        background-image: linear-gradient(blueviolet, rgba(230,230,250,0.7));
+    
+        #patrons {
+            background: rgb(207, 52, 59);
+            text-align: center;
+            padding: 0.1em;
+            
+            a:link {
+                color: $grey2;
+                text-decoration: underline;
+                font-size: 14px;
+                font-family: monospace;
+                font-weight: bold;
+            }
+    
+            a:visited {
+                color: $grey2;
+            }
+        }
+    
+        #signature {
+            height: 80px;
+            position: absolute;
+        }
+    
+        #links {
+            padding-top: 25px;
+            text-align: center;
+        }
+    
+        a:link {
+            text-decoration: none;
+        }
+    }
+    
+    .socialLogo {
+        width: 30px;
+        cursor: pointer;
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+
+} 
+

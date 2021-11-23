@@ -7,7 +7,7 @@ TODO:
 
 MAIN MENU
 - make hide/show feature instead of nav in page headers
-- add url fragments on nav for browser history
+- add url fragments on nav for browser history [complete]
 
 PAGE: PLAY CHESS
 - move chess app to it's own repo and host it here [complete]

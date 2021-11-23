@@ -12,8 +12,8 @@
 </head>
 <body id='mainBody' onload='main.init()'>
 <div id='menu'>
-    <header class='avatar'>
-        <img src='img/annarose.svg' />
+    <header>
+        <img src='img/annarose.svg' alt='avatar' />
     </header>
     <main>
         <section>
@@ -24,43 +24,47 @@
         </section>       
         <section>
             <h2>Studio</h2>
-            <button onclick='main.nav("shop")'>Shop</button>
-            <button onclick='main.nav("services")'>Services</button>
+            <button id='services' onclick='main.nav("services")'>
+                Services
+            </button>
+            <button id='shop' onclick='main.nav("shop")'>
+                Shop
+            </button>
+        </section>
+        <section>
+            <h2>Portfolio and Resume</h2>
+            <button id='swPortfolio' onclick='main.nav("swPortfolio")'>
+                Portfolio
+            </button>
+            <button id='resume' onclick='main.nav("resume")'>
+                Resume 
+            </button>
         </section>
         <section>
             <h2>Apps & Games</h2>
-            <button onclick='main.nav("myChess")'>
+            <button id='myChess' onclick='main.nav("myChess")'>
                 Chessboard
             </button>
-            <button onclick='main.nav("dndBackstories")'>
+            <button id='dndBackstories' onclick='main.nav("dndBackstories")'>
                 D&D Text Adventure
             </button>
         </section>
         <section>
             <h2>Illustrations</h2>
-            <button onclick='main.nav("vectorArt")'>
+            <button id='vectorArt' onclick='main.nav("vectorArt")'>
                 Vector Art
             </button>
-            <button onclick='main.nav("techDrawings")'>
+            <button id='techDrawings' onclick='main.nav("techDrawings")'>
                 Technical Drawings
             </button>
         </section>
         <section>
             <h2>Creative Writing</h2>
-            <button onclick='main.nav("shortStories")'>
+            <button id='shortStories' onclick='main.nav("shortStories")'>
                 Short Stories
             </button>
-            <button onclick='main.nav("book")'>
+            <button id='book' onclick='main.nav("book")'>
                 Memoir
-            </button>
-        </section>
-        <section>
-            <h2>Portfolio and Resume</h2>
-            <button onclick='main.nav("swPortfolio")'>
-                Software Portfolio
-            </button>
-            <button onclick='main.nav("resume")'>
-                Resume 
             </button>
         </section>
     </main>
@@ -85,12 +89,12 @@
     </footer>
 </div>
 
-<div id='sidePanel' style='display:none'>
+<div id='sidePanel' class='page' style='display:none'>
     <!-- page loads here -->  
 </div>
 
 <!-- store is here at top level so checkout tab shows on all pages -->  
-<div id='shop' class='page'>
+<div id='shopPanel' class='page'>
     <header>
         <a href='http://sarahrosannabusch.ca/' target='_parent'>
             Sarah Rosanna Busch's
@@ -309,6 +313,10 @@
         <p>Clicking the "Checkout" button will open a secure window. Once your payment is complete, a download link will be displayed.</p>
     </section>
 </div>
+
+<button id='menuBtn' onclick='main.nav("menu")'>
+    &#9776;
+</button>
 
     <script src='f.js'></script>
     <script src='main.js'></script>
