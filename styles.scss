@@ -4,8 +4,29 @@
  *  date: 17 April 2020
  */
 
-@import 'styles/signature.scss';
-@import 'styles/colours.scss';
+/* **************************** vars ************************* */
+
+$grey0: #010101;
+$grey1: #121212;
+$grey2: #232323;
+$grey3: #343434;
+$grey4: #454545;
+$grey5: #565656;
+$grey6: #676767;
+$grey7: #787878;
+$grey8: #898989;
+$grey9: #9A9A9A;
+$grey10: #ABABAB;
+$grey11: #BCBCBC;
+$grey12: #CDCDCD;
+$grey13: #DEDEDE;
+$grey14: #EFEFEF;
+
+$accentLight: lavender;
+$accentDark: blueviolet;
+
+$menuWidth: min(100vw, 800px);
+$pageWidth: 100vw;
 
 /* **************************** fundamentals ************************* */
 
@@ -18,7 +39,38 @@ body {
     background: $grey3;
     color: $accentLight;
     font-size: 12pt;
-    font-style: monospace;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+
+#mainBody {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#menu {    
+    flex: 0 0 $menuWidth;
+    background: $grey1;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#menu.closed {
+    flex: 0 0 0px;
+}
+
+.page {
+    flex: 0 0 $pageWidth;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: $grey3;
     background-image: url("img/background.svg");
     background-repeat: no-repeat;
     background-position: left;
@@ -26,283 +78,69 @@ body {
     background-size: cover;
 }
 
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $grey3;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+#sidePanel {    
+    z-index: 99;
+}
 
+#shopPanel {
+    position: absolute;
+    width: $pageWidth;
+    // z-index: -1; this broke the buttons
+}
 
-/* ****************************** Menu ***************************** */
+#menuBtn {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    background: none;
+    color: lavender;
+    z-index: 100;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 37px;
+    background: rgba(0,0,0,0.15);
+    border-width: 1px;
+}
 
-#menu {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    min-height: 100vh;
+@media screen and (min-width: 800px) {  
 
-    header {    
-        width: 100%;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
-        margin-bottom: 10px;
-        text-align: center;
-        font-family: monospace;
-        background: $grey2;
-
-        img {
-            width: 200px;
-        }
+    #menu {
+        flex: 0 0 350px;
     }
 
-    main {
+    #sidePanel, #shopPanel { //container
         display: inline-block;
-        vertical-align: top;
-        width: 100%;
+        flex: 1;
+        height: 100vh;
+        margin: 0;
+        margin-left: 2vh;
+        box-shadow: 2px 5px 20px 5px lavender;
     }
 
-    h2 {
-        font-size: 16pt;
-        background-image: linear-gradient(to right, blueviolet, lavender);
-        color: black;
-        font-family: monospace;
-        text-align: center;
+    #shopPanel {
+        width: calc(98vw - 350px);
+        left: 350px;
     }
 
-    section {
-        background: $grey2;
-        padding-bottom: 5px;
-        margin: auto;
-        margin-bottom: 10px;
+    header {
+        padding-top: 5px;
     }
 
-    p {
-        padding: 1em;
-        padding-top: 0.5em;
-        max-width: 12cm;
-        margin: auto;
+    .notForPhone { //skl for example
+        display: block !important;
     }
 
-    button {
-        border: none;
-        color: $grey8;
-        background-image: linear-gradient($grey4, black);
-        font-weight: bold;
-        margin-bottom: 5px;
-        width: 100%;
-        padding: 0.5em;
-        outline: none;
-        cursor: pointer;
-    }
-
-    button:hover {
-        box-shadow: 2px 1px 4px 2px lavender;
-        color: lavender;
-    }
-
-    button:active {
-        background-image: linear-gradient(black, $grey4);
-    }
-
-} //#menu
-
-/* ***************************** Pages ****************************** */
-
-header { //page headers 
-
-    display: block;
-    width: 100%;
-    padding-top: 0.2em;
-    padding-bottom: 0.5em;
-    background-image: linear-gradient(#121212, #454545);
-    margin-bottom: 0.5em;
-    text-align: center;
-
-    a {
-        font-size: 14pt;
-        font-weight: normal;
-        color: white;
-        vertical-align: middle;
-    }
-
-    a:link {
-        text-decoration: none;
-    }
-
-    a:visited {
-        text-decoration: none;
-    }
-
-    .smAvatar {
-        width: 30px;
-        vertical-align: bottom;
+    .frame { //picture frame
+        display: inline-block;
+        max-width: 650px;
+        margin-left: 2em;
     }
 }
 
-h1 {
-    background-image: linear-gradient(to right, blueviolet, lavender);
-    color: black;
-    font-family: monospace;
-    width: 100%;
-    margin-top: 0.3em;
-    margin-bottom: 0.2em;    
-    font-size: 22pt;
-} 
+/* **************************** imports ************************* */
 
-h2 {
-    text-align: left;
-    padding: 5px;
-    padding-left: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    font-family: monospace;
-    background-image: linear-gradient(to right, #343434, #232323);
-    color: blueviolet;
-}
-
-h3 {
-    text-align: center;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    font-family: cursive;
-    color: blueviolet;
-}
-
-.frame { //picture frame
-    margin: 1em;
-    background: #323232;
-    border: 5px inset silver;
-    box-shadow: 2px 5px 20px 5px black;
-    padding: 2px;
-    text-align: center;
-
-    img {        
-        max-width: 100%;
-        max-height: 85vh;
-        vertical-align: middle;
-    }
-}
-
-section {
-    width: 100%;
-    padding-top: 5px;
-    background-image: linear-gradient(#121212, #454545);
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-p {
-    text-align: left;
-    padding: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    color: lavender;
-    max-width: 20cm;
-    margin: auto;
-}
-
-a {
-    font-size: 16pt;
-    font-weight: bold;
-    color: lavender;
-}
-
-a:link {
-    color: lavender;
-}
-
-a:visited {
-    color: lavender;
-}
-
-.btnContainer {
-    text-align: center; 
-    padding-bottom: 1em;
-}
-
-button {
-    padding: 5px;
-    border-radius: 5px;
-    background:#454545;
-    color: lavender;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: blueviolet;
-}
-
-button.tab {
-    border-bottom: 1px;
-    border-radius: 5px 5px 0 0;
-}
-
-button.active {    
-    background: #212121;
-    color: yellow;
-}
-
-
-/******************************** footer *********************************/
-
-footer {
-    width: 100%;
-    height: 100px;
-    user-select: none;
-    background-image: linear-gradient(blueviolet, rgba(230,230,250,0.7));
-
-    #patrons {
-        background: rgb(207, 52, 59);
-        text-align: center;
-        padding: 0.1em;
-        
-        a:link {
-            color: $grey2;
-            text-decoration: underline;
-            font-size: 14px;
-            font-family: monospace;
-        }
-
-        a:visited {
-            color: $grey2;
-        }
-    }
-
-    #signature {
-        height: 80px;
-        position: absolute;
-    }
-
-    #links {
-        padding-top: 25px;
-        text-align: center;
-    }
-
-    a:link {
-        text-decoration: none;
-    }
-}
-
-.socialLogo {
-    width: 30px;
-    cursor: pointer;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-}
-
-@import 'styles/horizontal.scss'; 
+@import 'styles/signature.scss';
+@import 'styles/scrollbar.scss';
+@import 'styles/menu.scss';
+@import 'styles/pages.scss';

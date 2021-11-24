@@ -1,9 +1,40 @@
 TODO:
+
+Released: 23 Nov 2021
+
+- fix vertical alignment (and update f.) [complete]
+- refactor to reduce iframes (use ajax) [complete]
+- create Store page [complete]
+- create My Services page [complete]
+- clean up/organize css [complete]
+
+MAIN MENU
+- make hide/show feature instead of nav in page headers [complete]
+- add url fragments on nav for browser history [complete]
+
+PAGE: PLAY CHESS
+- move chess app to it's own repo and host it here [complete]
+- add links to open app in new tab, and to friend me on lichess [complete]
+
+PAGE: D&D Backstories
+- add header and footer, host app in an iframe [complete]
+
+ILLUSTRATIONS
+- refactor to eliminate iframes [complete]
+
+MEMOIR
+- move shopify stuff to store page and direct viewers to it, or amazon [complete]
+
+SHORT STORIES
+- add header and link to open in it's own tab [complete]
+
+RESUME
+- fix styles [half-assed]
+
+
+Released: 21 Sept 2021
 - clean up fs in gitHub [complete]
 - add tech drawings to Illustrations page [complete]
-- fix vertical alignment (and update f.)
-- fix layout responsiveness
-- make page refresh work
 
 
 Released: 15 July 2021
@@ -16,3 +47,36 @@ PAGES
 - swPortfolio: rearrange order [complete]
 - resume: edit text based on Mom's suggestion [complete]
 - memoir: edit text and add Shopify button [complete]
+
+
+Released: 21 June 2021
+
+MAIN MENU
+- update text and buttons [complete]
+
+PAGE HEADERS/FOOTER [1hr]
+- add Patreon link [complete]
+
+PAGE: PLAY CHESS [1hr + stretch]
+- edit text [complete]
+- display pgn [complete]
+- fix graphics (stretch goal) [complete]
+
+PAGE: MEMOIR [1hr]
+- change header to say "Memoir" [complete]
+- fix image width bug [complete]
+
+PAGE: SOFTWARE PORTFOLIO [1hr]
+- remove inset paragraph border [complete]
+- add lanelight and QT links, and switch to cp [complete]
+- move photo site demo out of repo [complete]
+
+PAGE: ILLUSTRATIONS
+- update text and add some more pieces [complete]
+
+VERTICAL LAYOUT [1hr]
+- fix horizontal scrollbar bug [complete]
+
+HORIZONTAL LAYOUT [2hr]
+- hide avatar and footer on pages [complete]
+- keep menu on left, display page on right [complete]

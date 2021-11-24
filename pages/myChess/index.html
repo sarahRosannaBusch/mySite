@@ -1,65 +1,16 @@
-<!doctype html>
-<html lang='en-US'>
-<head>
-    <meta charset='UTF-8' /> 
-    <title> myChess </title>
-    <meta name='author' content='Sarah Rosanna Busch' />
-    <meta name='description' content='Serverless version of myChess' />
-    <meta name='date' content='21 April 2021' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel='icon shortcut' href='../../img/icon.png' />
-    <link rel='stylesheet' href='myChess.css' />
-    <link rel='stylesheet' href='libs/chessboardjs/chessboard.css' />
-</head>
-<body onload='myChess.init()' style='background:#343434'>
+<div class='page'>
     <header>
         <a href='http://sarahrosannabusch.ca/' target='_parent'>
-            <img class='smAvatar' src='../../img/annarose.svg' />
             Sarah Rosanna Busch's
         </a>
         <h1>Chessboard</h1>
     </header>
-    <!-- <section>
-        <p class='container'>
-            After reading a bunch of chess blogs on my phone, I got frustrated with a bug in the open source chessboard.js library that makes it unusable on touchscreen. So I found the bug and fixed it. Then, just for fun, I drew my own chess pieces.
-        </p>
-    </section> -->
-    <section>
-        <!-- <h2>Play Chess</h2> -->
-        <h3 id="status" style="padding-bottom:0.25em">Make your move</h3>
-        <div id="myBoard" class="container spin"></div>
-        <br>
-        <div id='pgn' class='pgn container'></div>
-        <br>
-        <div id='fen'></div>
-    </section>
-    <br>
-    <footer class='pageFoot'>
-        <div id='patrons'>
-            <a href='https://www.patreon.com/sarahrosannabusch' target='_blank'>
-                Become a patron
-            </a>
-        </div>
-        <div id='signature'></div>
-        <div id='links'>
-            <a href='https://www.instagram.com/annarose0113/' target='_blank'>
-                <img class='socialLogo' src='../../img/insta.png' />
-            </a>
-            <a href='https://github.com/sarahRosannaBusch' target='_blank'>
-                <img class='socialLogo' src='../..//img/github.png' />
-            </a>
-            <a href='https://www.linkedin.com/in/sarah-rosanna-busch-641ab44a/' target='_blank'>
-                <img class='socialLogo' src='../../img/linkedin.png' />
-            </a>
-        </div>
+    <main>
+        <iframe src='https://sarahrosannabusch.github.io/myChess/'></iframe>
+    </main>
+    <footer>
+        Click <a href='https://sarahrosannabusch.github.io/myChess/' target='_blank'>here</a> to open this app in a new tab. <br>
+        Or come challenge me to a game at 
+        <a href="https://lichess.org/@/annarose0113" target="_blank">lichess.org</a>
     </footer>
-
-    <script src='../../footer.js'></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src='libs/chessboardjs/chessboard.js'></script>
-    <script src='libs/chess.js'></script>
-    <script src='../../f.js'></script>
-    <script src='myChess.js'></script>
-</body>
-</html>
+</div>

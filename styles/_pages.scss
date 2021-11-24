@@ -1,0 +1,204 @@
+/* ***************************** Pages ****************************** */
+
+.page {
+    
+    font-size: 13pt;
+
+    header { 
+        display: block;
+        width: 100%;
+        padding-top: 0.2em;
+        padding-bottom: 0.5em;
+        background-image: linear-gradient(#121212, #454545);
+        margin-bottom: 0.5em;
+        text-align: center;
+
+        a {
+            font-size: 14pt;
+            font-weight: normal;
+            color: white;
+            vertical-align: middle;
+            padding-top: 0.25em;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        .smAvatar {
+            width: 30px;
+            vertical-align: bottom;
+        }
+    }
+
+    main {
+        flex: 1;
+        overflow-y: hidden;
+    }
+
+    h1 {
+        background-image: linear-gradient(to right, blueviolet, lavender);
+        color: black;
+        font-family: monospace;
+        width: 100%;
+        margin-top: 0.3em;
+        margin-bottom: 0.2em;    
+        font-size: 22pt;
+    } 
+
+    h2 {
+        text-align: left;
+        padding: 5px;
+        padding-left: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-family: monospace;
+        background-image: linear-gradient(to right, #343434, #232323);
+        color: gold;
+    }
+
+    h3 {
+        text-align: center;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        font-family: cursive;
+        color: blueviolet;
+    }
+
+    h4 {
+        text-align: left;
+        color:blueviolet;
+        padding: 1em;
+        padding-bottom: 0;
+    }
+
+    h5 {
+        padding-left: 2em;
+        padding-bottom: 0.5em;
+        color: lavender;
+    }
+
+    .frame { //picture frame
+        margin: 1em;
+        background: #323232;
+        border: 5px inset silver;
+        box-shadow: 2px 5px 20px 5px black;
+        padding: 2px;
+        text-align: center;
+
+        img {        
+            max-width: 100%;
+            max-height: 85vh;
+            vertical-align: middle;
+        }
+    }
+
+    section {
+        width: 100%;
+        padding-top: 5px;
+        background-image: linear-gradient(#121212, $grey3);
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    p {
+        text-align: left;
+        padding: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        color: lavender;
+        max-width: 20cm;
+        margin: auto;
+    }
+
+    a {
+        font-size: large;
+        font-weight: bold;
+        color: lavender;
+    }
+
+    a:link {
+        color: lavender;
+    }
+
+    a:visited {
+        color: lavender;
+    }
+
+    .btnContainer {
+        text-align: center; 
+        padding-bottom: 1em;
+    }
+
+    button {
+        padding: 5px;
+        border-radius: 5px;
+        background:#454545;
+        color: lavender;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: blueviolet;
+    }
+
+    button.tab {
+        border-bottom: 1px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    button.active {    
+        background: #212121;
+        color: yellow;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .scrollContainer {  
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    ul {
+        display: inline-block;
+        text-align: left;
+
+        h3 {
+            text-align: left;
+            color: goldenrod;
+            font-family: monospace;
+        }
+    }
+
+    strong {
+        //color: rgb(196, 160, 229);
+        color: cornflowerblue;
+        font-size: large;
+    }
+
+    #resume {    
+        section {
+            text-align: left;
+        }
+
+        article {
+            max-width: 20cm;
+            margin: auto;
+        }
+    }
+
+    footer {
+        text-align: center;
+        padding: 1em;
+    }
+}

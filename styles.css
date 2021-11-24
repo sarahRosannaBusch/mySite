@@ -3,6 +3,115 @@
  *  author: Sarah Rosanna Busch
  *  date: 17 April 2020
  */
+/* **************************** vars ************************* */
+/* **************************** fundamentals ************************* */
+* {
+  box-sizing: border-box;
+  /* padding and border are included in total width/height of all elements */
+  margin: 0px;
+}
+
+body {
+  background: #343434;
+  color: lavender;
+  font-size: 12pt;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#mainBody {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#menu {
+  flex: 0 0 min(100vw, 800px);
+  background: #121212;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+#menu.closed {
+  flex: 0 0 0px;
+}
+
+.page {
+  flex: 0 0 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: #343434;
+  background-image: url("img/background.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-y: center;
+  background-size: cover;
+}
+
+#sidePanel {
+  z-index: 99;
+}
+
+#shopPanel {
+  position: absolute;
+  width: 100vw;
+}
+
+#menuBtn {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background: none;
+  color: lavender;
+  z-index: 100;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 37px;
+  background: rgba(0, 0, 0, 0.15);
+  border-width: 1px;
+}
+
+@media screen and (min-width: 800px) {
+  #menu {
+    flex: 0 0 350px;
+  }
+
+  #sidePanel, #shopPanel {
+    display: inline-block;
+    flex: 1;
+    height: 100vh;
+    margin: 0;
+    margin-left: 2vh;
+    box-shadow: 2px 5px 20px 5px lavender;
+  }
+
+  #shopPanel {
+    width: calc(98vw - 350px);
+    left: 350px;
+  }
+
+  header {
+    padding-top: 5px;
+  }
+
+  .notForPhone {
+    display: block !important;
+  }
+
+  .frame {
+    display: inline-block;
+    max-width: 650px;
+    margin-left: 2em;
+  }
+}
+/* **************************** imports ************************* */
 /****************************** Footer Styles *********************************/
 svg#flower {
   width: 103px;
@@ -23,25 +132,6 @@ g#purple {
 
 g#green {
   visibility: hidden;
-}
-
-/* **************************** fundamentals ************************* */
-* {
-  box-sizing: border-box;
-  /* padding and border are included in total width/height of all elements */
-  margin: 0px;
-}
-
-body {
-  background: #343434;
-  color: lavender;
-  font-size: 12pt;
-  font-style: monospace;
-  background-image: url("img/background.svg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-y: center;
-  background-size: cover;
 }
 
 /* width */
@@ -65,11 +155,6 @@ body {
 }
 
 /* ****************************** Menu ***************************** */
-#menu {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  min-height: 100vh;
-}
 #menu header {
   width: 100%;
   padding-top: 0.2em;
@@ -78,14 +163,16 @@ body {
   text-align: center;
   font-family: monospace;
   background: #232323;
+  flex: 0 0 200px;
 }
 #menu header img {
   width: 200px;
 }
 #menu main {
-  display: inline-block;
   vertical-align: top;
+  text-align: center;
   width: 100%;
+  flex: 0.99;
 }
 #menu h2 {
   font-size: 16pt;
@@ -93,25 +180,29 @@ body {
   color: black;
   font-family: monospace;
   text-align: center;
+  padding: 0.2em;
 }
 #menu section {
   background: #232323;
+  width: 100%;
+  padding-top: 5px;
   padding-bottom: 5px;
   margin: auto;
   margin-bottom: 10px;
 }
 #menu p {
-  padding: 1em;
-  padding-top: 0.5em;
+  padding: 0.75em;
   max-width: 12cm;
   margin: auto;
+  text-align: left;
 }
 #menu button {
   border: none;
-  color: #898989;
+  border-radius: 5px;
+  color: #DEDEDE;
   background-image: linear-gradient(#454545, black);
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-top: 5px;
   width: 100%;
   padding: 0.5em;
   outline: none;
@@ -124,9 +215,57 @@ body {
 #menu button:active {
   background-image: linear-gradient(black, #454545);
 }
+#menu button.selected {
+  background-image: linear-gradient(#343434, #121212);
+  box-shadow: 2px 1px 2px 2px gold, -2px -1px 1px 1px lavender;
+  color: gold;
+}
+#menu footer {
+  width: 100%;
+  flex: 0 0 100px;
+  position: relative;
+  bottom: 0;
+  user-select: none;
+  background-image: linear-gradient(blueviolet, rgba(230, 230, 250, 0.7));
+}
+#menu footer #patrons {
+  background: #cf343b;
+  text-align: center;
+  padding: 0.1em;
+}
+#menu footer #patrons a:link {
+  color: #232323;
+  text-decoration: underline;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+}
+#menu footer #patrons a:visited {
+  color: #232323;
+}
+#menu footer #signature {
+  height: 80px;
+  position: absolute;
+}
+#menu footer #links {
+  padding-top: 25px;
+  text-align: center;
+}
+#menu footer a:link {
+  text-decoration: none;
+}
+#menu .socialLogo {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
 
 /* ***************************** Pages ****************************** */
-header {
+.page {
+  font-size: 13pt;
+}
+.page header {
   display: block;
   width: 100%;
   padding-top: 0.2em;
@@ -135,24 +274,28 @@ header {
   margin-bottom: 0.5em;
   text-align: center;
 }
-header a {
+.page header a {
   font-size: 14pt;
   font-weight: normal;
   color: white;
   vertical-align: middle;
+  padding-top: 0.25em;
 }
-header a:link {
+.page header a:link {
   text-decoration: none;
 }
-header a:visited {
+.page header a:visited {
   text-decoration: none;
 }
-header .smAvatar {
+.page header .smAvatar {
   width: 30px;
   vertical-align: bottom;
 }
-
-h1 {
+.page main {
+  flex: 1;
+  overflow-y: hidden;
+}
+.page h1 {
   background-image: linear-gradient(to right, blueviolet, lavender);
   color: black;
   font-family: monospace;
@@ -161,8 +304,7 @@ h1 {
   margin-bottom: 0.2em;
   font-size: 22pt;
 }
-
-h2 {
+.page h2 {
   text-align: left;
   padding: 5px;
   padding-left: 1em;
@@ -170,18 +312,27 @@ h2 {
   margin-bottom: 0.5em;
   font-family: monospace;
   background-image: linear-gradient(to right, #343434, #232323);
-  color: blueviolet;
+  color: gold;
 }
-
-h3 {
+.page h3 {
   text-align: center;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   font-family: cursive;
   color: blueviolet;
 }
-
-.frame {
+.page h4 {
+  text-align: left;
+  color: blueviolet;
+  padding: 1em;
+  padding-bottom: 0;
+}
+.page h5 {
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+  color: lavender;
+}
+.page .frame {
   margin: 1em;
   background: #323232;
   border: 5px inset silver;
@@ -189,21 +340,19 @@ h3 {
   padding: 2px;
   text-align: center;
 }
-.frame img {
+.page .frame img {
   max-width: 100%;
   max-height: 85vh;
   vertical-align: middle;
 }
-
-section {
+.page section {
   width: 100%;
   padding-top: 5px;
-  background-image: linear-gradient(#121212, #454545);
+  background-image: linear-gradient(#121212, #343434);
   margin-bottom: 5px;
   text-align: center;
 }
-
-p {
+.page p {
   text-align: left;
   padding: 1em;
   padding-top: 0.5em;
@@ -212,27 +361,22 @@ p {
   max-width: 20cm;
   margin: auto;
 }
-
-a {
-  font-size: 16pt;
+.page a {
+  font-size: large;
   font-weight: bold;
   color: lavender;
 }
-
-a:link {
+.page a:link {
   color: lavender;
 }
-
-a:visited {
+.page a:visited {
   color: lavender;
 }
-
-.btnContainer {
+.page .btnContainer {
   text-align: center;
   padding-bottom: 1em;
 }
-
-button {
+.page button {
   padding: 5px;
   border-radius: 5px;
   background: #454545;
@@ -241,102 +385,49 @@ button {
   outline: none;
   cursor: pointer;
 }
-
-button:hover {
+.page button:hover {
   background: blueviolet;
 }
-
-button.tab {
+.page button.tab {
   border-bottom: 1px;
   border-radius: 5px 5px 0 0;
 }
-
-button.active {
+.page button.active {
   background: #212121;
   color: yellow;
 }
-
-/******************************** footer *********************************/
-footer {
+.page iframe {
   width: 100%;
-  height: 100px;
-  user-select: none;
-  background-image: linear-gradient(blueviolet, rgba(230, 230, 250, 0.7));
+  height: 100%;
+  border: none;
 }
-footer #patrons {
-  background: #cf343b;
-  text-align: center;
-  padding: 0.1em;
+.page .scrollContainer {
+  height: 100%;
+  overflow-y: auto;
 }
-footer #patrons a:link {
-  color: #232323;
-  text-decoration: underline;
-  font-size: 14px;
+.page ul {
+  display: inline-block;
+  text-align: left;
+}
+.page ul h3 {
+  text-align: left;
+  color: goldenrod;
   font-family: monospace;
 }
-footer #patrons a:visited {
-  color: #232323;
+.page strong {
+  color: cornflowerblue;
+  font-size: large;
 }
-footer #signature {
-  height: 80px;
-  position: absolute;
+.page #resume section {
+  text-align: left;
 }
-footer #links {
-  padding-top: 25px;
+.page #resume article {
+  max-width: 20cm;
+  margin: auto;
+}
+.page footer {
   text-align: center;
-}
-footer a:link {
-  text-decoration: none;
-}
-
-.socialLogo {
-  width: 30px;
-  cursor: pointer;
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-}
-
-@media screen and (min-width: 700px) {
-  #mainBody {
-    display: flex;
-    height: 100vh;
-  }
-
-  #menu {
-    position: relative;
-    display: inline-block;
-    width: 350px;
-    overflow-y: auto;
-  }
-
-  #sidePanel {
-    display: inline-block;
-    flex: 1;
-    height: 100vh;
-    margin: 2vh;
-    margin-top: 0;
-    box-shadow: 2px 5px 20px 5px lavender;
-  }
-
-  #sideView {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  header {
-    padding-top: 5px;
-  }
-
-  .notForPhone {
-    display: block !important;
-  }
-
-  .frame {
-    display: inline-block;
-    max-width: 650px;
-    margin-left: 2em;
-  }
+  padding: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
