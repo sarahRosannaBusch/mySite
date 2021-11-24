@@ -1,6 +1,9 @@
 /* ***************************** Pages ****************************** */
 
 .page {
+    
+    font-size: 13pt;
+
     header { 
         display: block;
         width: 100%;
@@ -15,6 +18,7 @@
             font-weight: normal;
             color: white;
             vertical-align: middle;
+            padding-top: 0.25em;
         }
 
         a:link {
@@ -54,7 +58,7 @@
         margin-bottom: 0.5em;
         font-family: monospace;
         background-image: linear-gradient(to right, #343434, #232323);
-        color: blueviolet;
+        color: gold;
     }
 
     h3 {
@@ -63,6 +67,19 @@
         margin-bottom: 0.25em;
         font-family: cursive;
         color: blueviolet;
+    }
+
+    h4 {
+        text-align: left;
+        color:blueviolet;
+        padding: 1em;
+        padding-bottom: 0;
+    }
+
+    h5 {
+        padding-left: 2em;
+        padding-bottom: 0.5em;
+        color: lavender;
     }
 
     .frame { //picture frame
@@ -83,7 +100,7 @@
     section {
         width: 100%;
         padding-top: 5px;
-        background-image: linear-gradient(#121212, #454545);
+        background-image: linear-gradient(#121212, $grey3);
         margin-bottom: 5px;
         text-align: center;
     }
@@ -99,7 +116,7 @@
     }
 
     a {
-        font-size: 16pt;
+        font-size: large;
         font-weight: bold;
         color: lavender;
     }
@@ -153,17 +170,35 @@
     }
 
     ul {
+        display: inline-block;
         text-align: left;
-        margin: auto;
 
         h3 {
             text-align: left;
-            color: gold;
+            color: goldenrod;
+            font-family: monospace;
         }
     }
 
     strong {
-        color: rgb(172, 112, 228);
-        font-size: larger;
+        //color: rgb(196, 160, 229);
+        color: cornflowerblue;
+        font-size: large;
+    }
+
+    #resume {    
+        section {
+            text-align: left;
+        }
+
+        article {
+            max-width: 20cm;
+            margin: auto;
+        }
+    }
+
+    footer {
+        text-align: center;
+        padding: 1em;
     }
 }

@@ -39,7 +39,7 @@ body {
     background: $grey3;
     color: $accentLight;
     font-size: 12pt;
-    font-style: monospace;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } 
 
 #mainBody {
@@ -84,6 +84,7 @@ body {
 
 #shopPanel {
     position: absolute;
+    width: $pageWidth;
     // z-index: -1; this broke the buttons
 }
 
@@ -98,7 +99,8 @@ body {
     width: 40px;
     height: 40px;
     line-height: 37px;
-    background: rgba(0,0,0,0.15)
+    background: rgba(0,0,0,0.15);
+    border-width: 1px;
 }
 
 @media screen and (min-width: 800px) {  

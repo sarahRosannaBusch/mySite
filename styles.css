@@ -15,7 +15,7 @@ body {
   background: #343434;
   color: lavender;
   font-size: 12pt;
-  font-style: monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #mainBody {
@@ -60,6 +60,7 @@ body {
 
 #shopPanel {
   position: absolute;
+  width: 100vw;
 }
 
 #menuBtn {
@@ -74,6 +75,7 @@ body {
   height: 40px;
   line-height: 37px;
   background: rgba(0, 0, 0, 0.15);
+  border-width: 1px;
 }
 
 @media screen and (min-width: 800px) {
@@ -260,6 +262,9 @@ g#green {
 }
 
 /* ***************************** Pages ****************************** */
+.page {
+  font-size: 13pt;
+}
 .page header {
   display: block;
   width: 100%;
@@ -274,6 +279,7 @@ g#green {
   font-weight: normal;
   color: white;
   vertical-align: middle;
+  padding-top: 0.25em;
 }
 .page header a:link {
   text-decoration: none;
@@ -306,7 +312,7 @@ g#green {
   margin-bottom: 0.5em;
   font-family: monospace;
   background-image: linear-gradient(to right, #343434, #232323);
-  color: blueviolet;
+  color: gold;
 }
 .page h3 {
   text-align: center;
@@ -314,6 +320,17 @@ g#green {
   margin-bottom: 0.25em;
   font-family: cursive;
   color: blueviolet;
+}
+.page h4 {
+  text-align: left;
+  color: blueviolet;
+  padding: 1em;
+  padding-bottom: 0;
+}
+.page h5 {
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+  color: lavender;
 }
 .page .frame {
   margin: 1em;
@@ -331,7 +348,7 @@ g#green {
 .page section {
   width: 100%;
   padding-top: 5px;
-  background-image: linear-gradient(#121212, #454545);
+  background-image: linear-gradient(#121212, #343434);
   margin-bottom: 5px;
   text-align: center;
 }
@@ -345,7 +362,7 @@ g#green {
   margin: auto;
 }
 .page a {
-  font-size: 16pt;
+  font-size: large;
   font-weight: bold;
   color: lavender;
 }
@@ -389,16 +406,28 @@ g#green {
   overflow-y: auto;
 }
 .page ul {
+  display: inline-block;
   text-align: left;
-  margin: auto;
 }
 .page ul h3 {
   text-align: left;
-  color: gold;
+  color: goldenrod;
+  font-family: monospace;
 }
 .page strong {
-  color: #ac70e4;
-  font-size: larger;
+  color: cornflowerblue;
+  font-size: large;
+}
+.page #resume section {
+  text-align: left;
+}
+.page #resume article {
+  max-width: 20cm;
+  margin: auto;
+}
+.page footer {
+  text-align: center;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

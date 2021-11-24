@@ -1,32 +1,35 @@
 TODO:
+
+Released: 23 Nov 2021
+
 - fix vertical alignment (and update f.) [complete]
 - refactor to reduce iframes (use ajax) [complete]
-- create Store page [wip]
-- create My Services page [wip]
-- clean up/organize css
+- create Store page [complete]
+- create My Services page [complete]
+- clean up/organize css [complete]
 
 MAIN MENU
-- make hide/show feature instead of nav in page headers
+- make hide/show feature instead of nav in page headers [complete]
 - add url fragments on nav for browser history [complete]
 
 PAGE: PLAY CHESS
 - move chess app to it's own repo and host it here [complete]
-- add links to open app in new tab, and to friend me on lichess
+- add links to open app in new tab, and to friend me on lichess [complete]
 
 PAGE: D&D Backstories
-- add header and footer, host app in an iframe [wip]
+- add header and footer, host app in an iframe [complete]
 
 ILLUSTRATIONS
 - refactor to eliminate iframes [complete]
 
 MEMOIR
-- move shopify stuff to store page and direct viewers to it, or amazon [wip]
+- move shopify stuff to store page and direct viewers to it, or amazon [complete]
 
 SHORT STORIES
-- add header and link to open in it's own tab [wip]
+- add header and link to open in it's own tab [complete]
 
 RESUME
-- fix styles
+- fix styles [half-assed]
 
 
 Released: 21 Sept 2021
