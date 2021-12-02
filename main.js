@@ -47,7 +47,7 @@ var main = (function() {
             if(elem.body.clientWidth < 800) {
                 main.nav("menu");
             } else {
-                main.nav("shop");
+                main.nav("services");
             }
         } else {
             main.nav(hash);
