@@ -326,6 +326,7 @@ g#green {
   color: blueviolet;
   padding: 1em;
   padding-bottom: 0;
+  font-size: large;
 }
 .page h5 {
   padding-left: 2em;
@@ -348,7 +349,9 @@ g#green {
 .page section {
   width: 100%;
   padding-top: 5px;
-  background-image: linear-gradient(#121212, #343434);
+  padding-bottom: 1em;
+  background: #232323;
+  background-image: linear-gradient(#121212, #232323);
   margin-bottom: 5px;
   text-align: center;
 }
@@ -364,9 +367,6 @@ g#green {
 .page a {
   font-size: large;
   font-weight: bold;
-  color: lavender;
-}
-.page a:link {
   color: lavender;
 }
 .page a:visited {
@@ -394,7 +394,7 @@ g#green {
 }
 .page button.active {
   background: #212121;
-  color: yellow;
+  color: #d6d950;
 }
 .page iframe {
   width: 100%;
@@ -408,15 +408,33 @@ g#green {
 .page ul {
   display: inline-block;
   text-align: left;
+  padding-right: 1em;
 }
 .page ul h3 {
   text-align: left;
-  color: goldenrod;
+  color: blueviolet;
   font-family: monospace;
 }
 .page strong {
-  color: cornflowerblue;
   font-size: large;
+}
+.page .red {
+  color: #c8250e !important;
+}
+.page .orange {
+  color: #df7233 !important;
+}
+.page .yellow {
+  color: #d6d950 !important;
+}
+.page .green {
+  color: #5fa638 !important;
+}
+.page .blue {
+  color: #7cc9ff !important;
+}
+.page .purple {
+  color: #b684ed !important;
 }
 .page #resume section {
   text-align: left;

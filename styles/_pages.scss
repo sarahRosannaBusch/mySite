@@ -74,6 +74,7 @@
         color:blueviolet;
         padding: 1em;
         padding-bottom: 0;
+        font-size: large;
     }
 
     h5 {
@@ -100,7 +101,9 @@
     section {
         width: 100%;
         padding-top: 5px;
-        background-image: linear-gradient(#121212, $grey3);
+        padding-bottom: 1em;
+        background: $grey2;
+        background-image: linear-gradient($grey1, $grey2);
         margin-bottom: 5px;
         text-align: center;
     }
@@ -121,11 +124,7 @@
         color: lavender;
     }
 
-    a:link {
-        color: lavender;
-    }
-
-    a:visited {
+    a:visited {        
         color: lavender;
     }
 
@@ -155,7 +154,7 @@
 
     button.active {    
         background: #212121;
-        color: yellow;
+        color: $yellow;
     }
 
     iframe {
@@ -172,19 +171,25 @@
     ul {
         display: inline-block;
         text-align: left;
+        padding-right: 1em;
 
         h3 {
             text-align: left;
-            color: goldenrod;
+            color: blueviolet;
             font-family: monospace;
         }
     }
 
     strong {
-        //color: rgb(196, 160, 229);
-        color: cornflowerblue;
         font-size: large;
     }
+
+    .red { color: $red !important }
+    .orange { color: $orange !important }
+    .yellow { color: $yellow !important }
+    .green { color: $green !important }
+    .blue { color: $blue !important }
+    .purple { color: $purple !important }
 
     #resume {    
         section {
