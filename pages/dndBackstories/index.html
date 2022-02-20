@@ -9,10 +9,11 @@
         <section id="demo">
             <h2>Two-minute Teaser Demo</h2>
             <p>    
-                This interactive fiction tells the story of how heros are made in the world of <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>Dungeons and Dragons</a>. You don't need to have any D&D experience to play, just a love of adventure stories. Click the button to play this two-minute demo now. 
+                This piece of interactive fiction tells the story of how heros are made in the world of <a href='https://dnd.wizards.com/articles/features/basicrules' target='_blank'>Dungeons and Dragons</a>. You don't need to have any D&D experience to play, just a love of adventure stories. Click the button to play this two-minute demo now. 
             </p>
             <div id="poster">
-                <img id='aGuildLogo' src="pages/dndBackstories/adventuresGuildLogo.svg" alt="Adventurers Guild Logo" />
+                <object id='aGuildLogo' type='image/svg+xml' data="pages/dndBackstories/adventuresGuildLogo.svg"  onload='dndBackstories.load()'>
+                </object>
                 <a href="http://172.218.132.185:8080/" target="_blank">
                     <button>Play<br>Demo</button>
                 </a>

@@ -34,19 +34,18 @@
         padding-left: 1em;
         padding-right: 1em;
         border-width: 5px 7px 7px 5px;
-        transform: rotate(5deg);
+        transform: rotate(-5deg);
     }
 
     button:hover {
-        background-image: linear-gradient(to right, blueviolet, lavender);
+        background: rgba(228, 228, 228, 0.5);
     }
 
     button:active {
         border-width: 7px 5px 5px 7px;
+        background-image: linear-gradient(to right, blueviolet, lavender);
     }
 }
-
-/* *********************** Animation ********************** */
 
 #aGuildLogo {
     max-width: 95%;
