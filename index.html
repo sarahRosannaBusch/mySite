@@ -5,7 +5,7 @@
     <title> Sarah Rosanna Busch </title>
     <meta name='author' content='Sarah Rosanna Busch' />
     <meta name='description' content="Sarah Rosanna Busch's web studio. Services include web development, graphics, and documentation." />
-    <meta name='date' content='6 Sept 2020' />
+    <meta name='date' content='11 March 2022' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon shortcut' href='img/icon.png' />
     <link rel='stylesheet' href='styles.css' />
@@ -32,39 +32,42 @@
             </button>
         </section>
         <section>
+            <h2>Apps & Games</h2>
+            <button id="diceRoller" onclick="main.nav('diceRoller')">
+                3D Dice Roller
+            </button>
+            <button id='dndBackstories' onclick='main.nav("dndBackstories")'>
+                D&D Text Adventure
+            </button>
+            <button id='myChess' onclick='main.nav("myChess")'>
+                Chessboard
+            </button>
+        </section>
+        <section>
+            <h2>Illustrations</h2>
+            <button id='techDrawings' onclick='main.nav("techDrawings")'>
+                Technical Drawings
+            </button>
+            <button id='vectorArt' onclick='main.nav("vectorArt")'>
+                Vector Art
+            </button>
+        </section>
+        <section>
+            <h2>Creative Writing</h2>
+            <button id='book' onclick='main.nav("book")'>
+                Memoir
+            </button>
+            <button id='shortStories' onclick='main.nav("shortStories")'>
+                Short Stories
+            </button>
+        </section>
+        <section>
             <h2>Portfolio and Resume</h2>
             <button id='swPortfolio' onclick='main.nav("swPortfolio")'>
                 Portfolio
             </button>
             <button id='resume' onclick='main.nav("resume")'>
                 Resume 
-            </button>
-        </section>
-        <section>
-            <h2>Apps & Games</h2>
-            <button id='myChess' onclick='main.nav("myChess")'>
-                Chessboard
-            </button>
-            <button id='dndBackstories' onclick='main.nav("dndBackstories")'>
-                D&D Text Adventure
-            </button>
-        </section>
-        <section>
-            <h2>Illustrations</h2>
-            <button id='vectorArt' onclick='main.nav("vectorArt")'>
-                Vector Art
-            </button>
-            <button id='techDrawings' onclick='main.nav("techDrawings")'>
-                Technical Drawings
-            </button>
-        </section>
-        <section>
-            <h2>Creative Writing</h2>
-            <button id='shortStories' onclick='main.nav("shortStories")'>
-                Short Stories
-            </button>
-            <button id='book' onclick='main.nav("book")'>
-                Memoir
             </button>
         </section>
     </main>
@@ -540,6 +543,5 @@
     <script src='main.js'></script>
     <script src='footer.js'></script>  
     <script src='pages/illustrations/illustrations.js'></script>
-    <script src='pages/dndBackstories/dndBackstories.js'></script>
 </body>
 </html>

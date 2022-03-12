@@ -2,7 +2,7 @@
 
 /** @brief  my resume
  *  @author Sarah Rosanna Busch
- *  @date   13 July 2021
+ *  @date   11 March 2022
  */
 
 window.addEventListener("resize", () => { 
@@ -21,6 +21,7 @@ var main = (function() {
         shop: 'shop',
         services: './pages/services/services.html',
         myChess: './pages/myChess/index.html',
+        diceRoller: './pages/diceRoller/index.html',
         dndBackstories: './pages/dndBackstories/index.html',
         vectorArt: './pages/illustrations/vectorArt.html',
         techDrawings: './pages/illustrations/techDrawings.html',
