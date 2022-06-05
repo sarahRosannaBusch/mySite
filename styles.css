@@ -457,6 +457,9 @@ g#green {
 #demo a {
   color: #7cc9ff !important;
 }
+#demo p {
+  background-color: #232323;
+}
 
 #poster {
   position: relative;
