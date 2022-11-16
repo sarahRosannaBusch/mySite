@@ -1,0 +1,68 @@
+<style>
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        50%{ transform: rotate(180deg); }
+        100%  { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+        from { transform: scale(1); }
+        to { transform: scale(1.1); }
+    }
+    @keyframes expand {
+        from { transform: translateY(0px); }
+        to { transform: translateY(-20px); }
+    }
+    path:hover, use:hover, g:hover {
+        opacity: 1 !important;        
+        animation-play-state: paused;
+    }
+    #centerG {
+        transform-box: fill-box; /* to rotate around center! */
+        transform-origin: center;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+    }
+    #square {
+        transform-box: fill-box; /* to scale around center! */
+        transform-origin: center;
+        animation-name: pulse;
+        animation-duration: 1.25s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+    #diamond {
+        animation-name: expand;
+        animation-duration: 1.25s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+    }
+
+    /* facial expressions */
+    .show * {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+</style>
+
+<div>
+    <header>
+        <a href='http://sarahrosannabusch.ca/' target='_parent'>
+            Sarah Rosanna Busch's
+        </a>
+        <h1>SVG Animations</h1>
+    </header>
+    <main>
+        <section id='container'>
+            <!-- frame, heading, and svg loaded here -->
+        </section>   
+    </main>
+</div>

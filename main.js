@@ -23,6 +23,7 @@ var main = (function() {
         myChess: './pages/myChess/index.html',
         diceRoller: './pages/diceRoller/index.html',
         dndBackstories: './pages/dndBackstories/index.html',
+        svgAnimations: './pages/illustrations/svgAnimations.html',
         vectorArt: './pages/illustrations/vectorArt.html',
         techDrawings: './pages/illustrations/techDrawings.html',
         shortStories: './pages/book/shortStories.html',
@@ -87,6 +88,9 @@ var main = (function() {
                         break;
                     case "techDrawings":
                         illustrations.load("techDrawings");
+                        break;
+                    case "svgAnimations":
+                        illustrations.load("svgAnimations");
                         break;
                 }
                 window.scrollTo(0,0);
