@@ -29,7 +29,8 @@ var main = (function() {
         shortStories: './pages/book/shortStories.html',
         book: './pages/book/index.html',
         swPortfolio: './pages/swPortfolio/index.html',
-        resume: './pages/resume/index.html'
+        resume: './pages/resume/index.html',
+        charts: './pages/illustrations/charts.html'
     }
 
     that.init = function() {
@@ -80,7 +81,7 @@ var main = (function() {
         } else {
             elem.sidePanel.style.display = 'inline-block';
             var url = pageUrls[hash];
-            f.http.get(url, function(pageData) {
+            f.ajax.get(url, function(pageData) {
                 elem.sidePanel.innerHTML = pageData;
                 switch(hash) {
                     case "vectorArt":
@@ -91,6 +92,9 @@ var main = (function() {
                         break;
                     case "svgAnimations":
                         illustrations.load("svgAnimations");
+                        break;
+                    case "charts":
+                        charts.init();
                         break;
                 }
                 window.scrollTo(0,0);

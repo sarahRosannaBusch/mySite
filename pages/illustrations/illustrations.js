@@ -74,7 +74,7 @@ var illustrations = (function(){
                 h3.innerText = heading;
             }
             let filename = 'pages/illustrations/' + pageName + '/' + drawings[i][urlIdx];
-            f.http.get(filename, (svgXML) => {
+            f.ajax.get(filename, (svgXML) => {
                 frame.innerHTML += svgXML;
             });
         }

@@ -3,8 +3,8 @@
  * @file       f.js
  * @brief      fundamental web dev toolkit
  * @author     Sarah Rosanna Busch
- * @version    0.2
- * @date       12 April 2020
+ * @version    0.21
+ * @date       29 Nov 2022
  * */
 
 var f = (function(){
@@ -48,7 +48,7 @@ var f = (function(){
         return html;
     }());
 
-    that.http = (function(){
+    that.ajax = (function(){
         var http = {};
 
         http.get = function(file, callback) {
@@ -90,6 +90,30 @@ var f = (function(){
 
         return js;
     }());
+
+    that.table = (function() {
+        var table = {};
+
+        table.insertRows = function(containerId, data) {
+            
+        }
+
+        table.create = function(containerId, data) {
+            return new DataTable(containerId);
+        }
+
+        function DataTable(containerId, data) {
+            var self = this; //for event listeners
+            var elem = {};
+            elem.container = f.html.getElem("#"+containerId);
+            if(elem.container === null) {
+                console.error("Element with id " + containerId + " not found.");
+                return;
+            }
+        }
+
+        return table;
+    });
 
     that.time = (function() {
         var time = {};
