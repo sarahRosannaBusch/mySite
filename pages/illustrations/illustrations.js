@@ -84,9 +84,15 @@ var illustrations = (function(){
         let expElems = [];
         let i = 0;
         let timer = setInterval(() => {
-            if(!expElems[i]) {                
-                expElems.push(f.html.getElem("#exp_"+i));
-                expElems[i].style.display = "inline";
+            if(!expElems[i]) {               
+                let elem = f.html.getElem("#exp_"+i);
+                if(elem) {
+                    expElems.push(elem);
+                    expElems[i].style.display = "inline";
+                } else {
+                    clearInterval(timer);
+                    return; //not on this page anymore
+                }
             }
             let last = i - 1;
             if(last < 0) { last = 11; }

@@ -17,7 +17,7 @@ var charts = (function() {
                 var name = res._links["country:items"][i].name;
                 var countryCode = res._links["country:items"][i].href.slice(-3, -1);
                 countries[countryCode] = name;
-                console.log(countryCode + ":" + name);
+                //console.log(countryCode + ":" + name);
                 var salaryAPI = `https://api.teleport.org/api/countries/iso_alpha2:${countryCode}/salaries/`;
                 f.ajax.get(salaryAPI, (salaryData) => {
                     rxCount++;
@@ -28,10 +28,10 @@ var charts = (function() {
                     var countryCode = salaryData._links.self.href.slice(-12, -10);
                     if(webDevData?.job?.id === "WEB-DEVELOPER") {
                         salaries[countryCode] = webDevData.salary_percentiles;
-                        console.log(webDevData.salary_percentiles);
+                        //console.log(webDevData.salary_percentiles);
                     } else {
                         salaries[countryCode] = {percentile_25: 0, percentile_50: 0, percentile_75: 0};
-                        console.log("no salary data available for: " + countryCode);
+                        //console.log("no salary data available for: " + countryCode);
                     }
                     var sal = salaries[countryCode];
                     var rowData = [
@@ -47,6 +47,7 @@ var charts = (function() {
                         cell.innerHTML = rowData[d];
                     }
                     if(rxCount >= count) {
+                        //we have all the data now
                         console.log(JSON.stringify(tableData));
                     }
                 });

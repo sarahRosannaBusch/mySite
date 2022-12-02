@@ -1,3 +1,36 @@
+<style>
+    #tableSection {
+        height: 75vh;
+        max-height: 30rem;
+        overflow-y: scroll;
+    }
+    table {
+        text-align: right;
+        margin: auto;
+        width: 90%;
+    }
+    thead * {
+        position: sticky;
+        top: 0;
+    }
+    td, th {
+        width: 20%;
+        padding: 0 0.5rem;
+    }
+    tr:nth-child(even) {
+        background: #505050;
+    }
+    thead tr {
+        background-image: linear-gradient(to right, blueviolet, lavender);
+        color: black;
+    }
+    #tableSection button {
+        width: 100%;
+        background: none !important;
+        border: none;
+        color: black !important;
+    }
+</style>
 <div class='page'>
     <main class="scrollContainer">
         <header>
@@ -5,15 +38,25 @@
                 Sarah Rosanna Busch's
             </a>
             <h1>Tables and Charts</h1>
-            <table id="webDevSalaries">
-                <thead>
-                    <tr><th>Country</th><th>25%</th><th>50%</th><th>75%</th></tr>
-                </thead>
-                <!-- contents added dynamically -->
-            </table>
         </header>
         <section>
             <h2>Interactive Table</h2>
+            <section id="tableSection">
+                <table>
+                    <caption><h3>Web Dev Salaries by Country</h3></caption>
+                    <thead>
+                        <tr>
+                            <th><button>Country</button></th>
+                            <th><button>25%</button></th>
+                            <th><button>50%</button></th>
+                            <th><button>75%</button></th>
+                        </tr>
+                    </thead>
+                    <tbody id="webDevSalaries">
+                        <!-- contents added dynamically -->
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
     <footer>
