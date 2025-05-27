@@ -158,7 +158,7 @@ g#green {
 .page header {
   display: block;
   width: 100%;
-  padding-top: 0.2em;
+  padding-top: 1em;
   padding-bottom: 0.5em;
   background-image: linear-gradient(#121212, #454545);
   margin-bottom: 0.5em;
@@ -332,6 +332,41 @@ g#green {
 .page #resume article {
   max-width: 20cm;
   margin: auto;
+}
+.page #resume .spacedList li {
+  padding-bottom: 0.5rem;
+}
+.page .portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.page .project {
+  background: #EFEFEF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+.page .project p {
+  color: black !important;
+}
+.page .project a {
+  color: #21426D;
+}
+.page video {
+  width: 100%;
+  max-width: 100vw;
+  border-radius: 10px;
+}
+.page .description {
+  margin-top: 10px;
+}
+.page .review img {
+  border-radius: 10px;
+  margin-top: 10px;
 }
 .page footer {
   text-align: center;
