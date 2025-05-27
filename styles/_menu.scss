@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 /* ****************************** Menu ***************************** */
 
 #menu {
@@ -105,10 +107,11 @@
         #signature {
             height: 80px;
             position: absolute;
+            top: 7px;
         }
     
         #links {
-            padding-top: 25px;
+            padding-top: 35px;
             text-align: center;
         }
     
