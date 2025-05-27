@@ -1,123 +1,12 @@
 /** filename: styles.scss
  *  description: main stylesheet for sarahRosannaBusch.ca
  *  author: Sarah Rosanna Busch
- *  date: 17 April 2020
+ *  date: 27 May 2025
  */
-/* **************************** vars ************************* */
-/* **************************** fundamentals ************************* */
-* {
-  box-sizing: border-box;
-  /* padding and border are included in total width/height of all elements */
-  margin: 0px;
-}
-
-body {
-  background: #343434;
-  color: lavender;
-  font-size: 12pt;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-#mainBody {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-#menu {
-  flex: 0 0 min(100vw, 800px);
-  background: #121212;
-  height: 100vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  z-index: 100;
-}
-
-#menu.closed {
-  flex: 0 0 0px;
-}
-
-.page {
-  flex: 0 0 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  background: #343434;
-  background-image: url("img/background.svg");
-  background-repeat: no-repeat;
-  background-position: left;
-  background-position-y: center;
-  background-size: cover;
-}
-
-#sidePanel {
-  z-index: 99;
-}
-
-#shopPanel {
-  position: absolute;
-  width: 100vw;
-}
-
-#menuBtn {
-  position: absolute;
-  top: 15px;
-  left: 10px;
-  background: none;
-  color: lavender;
-  z-index: 100;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
-  line-height: 37px;
-  background: rgba(0, 0, 0, 0.15);
-  border-width: 1px;
-}
-
-@media screen and (min-width: 800px) {
-  #menu {
-    flex: 0 0 350px;
-  }
-
-  #sidePanel, #shopPanel {
-    display: inline-block;
-    flex: 1;
-    height: 100vh;
-    margin: 0;
-    margin-left: 2vh;
-    box-shadow: 2px 5px 20px 5px lavender;
-  }
-
-  #shopPanel {
-    width: calc(98vw - 350px);
-    left: 350px;
-  }
-
-  header {
-    padding-top: 5px;
-  }
-
-  .notForPhone {
-    display: block !important;
-  }
-
-  .frame {
-    display: inline-block;
-    max-width: 650px;
-    margin-left: 2em;
-  }
-}
-/* **************************** imports ************************* */
 /****************************** Footer Styles *********************************/
 svg#flower {
-  width: 103px;
-  /* 103px */
-  height: auto;
-  /* 69px */
+  width: 103px; /* 103px */
+  height: auto; /* 69px */
   position: absolute;
   padding: 3px;
 }
@@ -229,7 +118,7 @@ g#green {
   background-image: linear-gradient(blueviolet, rgba(230, 230, 250, 0.7));
 }
 #menu footer #patrons {
-  background: #cf343b;
+  background: rgb(207, 52, 59);
   text-align: center;
   padding: 0.1em;
 }
@@ -246,9 +135,10 @@ g#green {
 #menu footer #signature {
   height: 80px;
   position: absolute;
+  top: 7px;
 }
 #menu footer #links {
-  padding-top: 25px;
+  padding-top: 35px;
   text-align: center;
 }
 #menu footer a:link {
@@ -499,6 +389,108 @@ g#green {
 #aGuildLogo {
   max-width: 95%;
   max-height: 55vh;
+}
+
+/* **************************** fundamentals ************************* */
+* {
+  box-sizing: border-box; /* padding and border are included in total width/height of all elements */
+  margin: 0px;
+}
+
+body {
+  background: #343434;
+  color: lavender;
+  font-size: 12pt;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#mainBody {
+  display: flex;
+  height: 100dvh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#menu {
+  flex: 0 0 min(100vw, 800px);
+  background: #121212;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+#menu.closed {
+  flex: 0 0 0px;
+}
+
+.page {
+  flex: 0 0 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: #343434;
+  background-image: url("img/background.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-y: center;
+  background-size: cover;
+}
+
+#sidePanel {
+  z-index: 99;
+}
+
+#shopPanel {
+  position: absolute;
+  width: 100vw;
+}
+
+#menuBtn {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background: none;
+  color: lavender;
+  z-index: 100;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 37px;
+  background: rgba(0, 0, 0, 0.15);
+  border-width: 1px;
+}
+
+@media screen and (min-width: 800px) {
+  #menu {
+    flex: 0 0 350px;
+  }
+  #sidePanel, #shopPanel {
+    display: inline-block;
+    flex: 1;
+    height: 100%;
+    margin: 0;
+    margin-left: 2vh;
+    box-shadow: 2px 5px 20px 5px lavender;
+  }
+  #shopPanel {
+    width: calc(98vw - 350px);
+    left: 350px;
+  }
+  header {
+    padding-top: 5px;
+  }
+  .notForPhone {
+    display: block !important;
+  }
+  .frame {
+    display: inline-block;
+    max-width: 650px;
+    margin-left: 2em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

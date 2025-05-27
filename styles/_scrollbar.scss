@@ -1,4 +1,6 @@
-  /* width */
+@use 'variables' as *;
+
+/* width */
   ::-webkit-scrollbar {
     width: 10px;
   }
