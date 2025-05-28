@@ -165,6 +165,16 @@
         border: none;
     }
 
+    iframe.article {
+        width: 90%;
+        height: 90dvh;
+        margin: 1em;
+        background: #323232;
+        border: 5px inset silver;
+        box-shadow: 2px 5px 20px 5px black;
+        padding: 2px;
+    }
+
     .scrollContainer {  
         height: 100%;
         overflow-y: auto;
