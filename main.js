@@ -21,6 +21,7 @@ var main = (function() {
         shop: 'shop',
         services: './pages/services/services.html',
         myChess: './pages/myChess/index.html',
+        txtaria: './pages/txtaria/index.html',
         diceRoller: './pages/diceRoller/index.html',
         dndBackstories: './pages/dndBackstories/index.html',
         svgAnimations: './pages/illustrations/svgAnimations.html',
