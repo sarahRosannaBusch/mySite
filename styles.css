@@ -356,19 +356,26 @@ g#green {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 800px;
+  max-width: 100vw;
   margin-bottom: 20px;
 }
 .page .project p {
   color: black !important;
+  padding: 0.5em;
 }
 .page .project a {
   color: #21426D;
+}
+.page .project h4 {
+  text-align: center;
+  padding: 0;
+  font-size: smaller;
 }
 .page video {
   width: 100%;
   max-width: 100vw;
   border-radius: 10px;
+  margin-top: 1em;
 }
 .page .description {
   margin-top: 10px;
@@ -376,6 +383,7 @@ g#green {
 .page .review img {
   border-radius: 10px;
   margin-top: 10px;
+  max-width: 90vw;
 }
 .page footer {
   text-align: center;
